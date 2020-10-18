@@ -1,5 +1,15 @@
 import React from "react";
 
-export default function Loading() {
-  return <h1>hello from Loading</h1>;
+import LoadingGif from './LoadingGif'
+
+const Loading = () => {
+  return (
+    <div className="loading">
+      <h3>loading...</h3>
+      <LoadingGif/>
+    </div>
+
+  )
 }
+
+export default Loading

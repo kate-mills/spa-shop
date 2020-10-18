@@ -3,4 +3,13 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 
-ReactDOM.render(<App />, document.getElementById("root"));
+import ProductProvider from './context/products'
+import CartProvider from './context/cart'
+
+ReactDOM.render(
+  <ProductProvider>
+  <CartProvider>
+    <App />
+  </CartProvider>
+  </ProductProvider>, 
+  document.getElementById("root"));

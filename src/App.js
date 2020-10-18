@@ -1,5 +1,34 @@
 import React from "react";
 
-export default function App() {
-  return <h1>hello from app component</h1>;
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'; 
+
+import Header from './components/Header'
+
+import About from './pages/About'
+import Cart from './pages/Cart'
+import Checkout from './pages/Checkout'
+import Error from './pages/Error'
+import Home from './pages/Home'
+import Login from './pages/Login'
+import ProductDetails from './pages/ProductDetails'
+import Products from './pages/Products'
+
+const App = () => {
+  return(
+    <Router>
+      <Header/>
+      <Switch>
+        <Route path="/" exact><Home/></Route>
+        <Route path="/about"><About/></Route>
+        <Route path="/cart"><Cart/></Route>
+        <Route path="/checkout"><Checkout/></Route>
+        <Route path="/login"><Login/></Route>
+        <Route path="/products" exact><Products/></Route>
+        <Route path="/products/:id"><ProductDetails/></Route>
+        <Route path="*"><Error/></Route>
+      </Switch>
+    </Router>
+  )
 }
+
+export default App;

@@ -3,7 +3,7 @@
 Fonts
 ======
 */
-@import url("https://fonts.googleapis.com/css?family=Catamaran:300,400|Kaushan+Script&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,300;0,400;0,700;1,400&family=Sacramento&display=swap');
 /* 
 ====== 
 Variables 
@@ -12,17 +12,19 @@ Variables
 :root {
   /* --primaryColor: #9e3aa3; */
   /* --primaryDarkColor: #4e1d51; */
-  --primaryColor: #f15025;
-  --primaryDarkColor: #c02c03;
-  --primaryFont: "Catamaran", sans-serif;
-  --slantedFont: "Kaushan Script", cursive;
+  --primaryColor: #7DAECE;
+  --primaryLightColor:#85C7F2;
+  --primaryDarkColor: #6C7C87; /*#7495AB;*/
+  --primaryFont: "Josefin Slab", serif;
+  --cursiveFont: "Sacramento", cursive;
+  --slantedFont: "Sacramento", cursive;
   --mainWhite: #fff;
-  --offWhite: #f7f7f7;
-  --mainBackground: #ececec;
+  --offWhite: #EDEDED;
+  --mainBackground: #DBDBDB;
   --mainOverlay: rgba(35, 10, 36, 0.4);
-  --mainBlack: #222;
-  --mainGrey: #ececec;
-  --darkGrey: #afafaf;
+  --mainBlack: #4c4c4c;
+  --mainGrey: #DBDBDB;
+  --darkGrey: #B6B6B6;
   --mainRed: #bd0303;
   --mainTransition: all 0.3s linear;
   --mainSpacing: 0.3rem;
@@ -82,6 +84,11 @@ img {
   font-size: 1.7rem;
   margin-top: 3rem;
   letter-spacing: var(--mainSpacing);
+  color: var(--primaryDarkColor);
+}
+
+.loading h3{
+  font-weight: 200 !important;
 }
 .loading img {
   width: 10rem;
@@ -184,14 +191,18 @@ Hero
   min-height: calc(65vh);
   background: linear-gradient(
       to right,
-      rgba(0, 0, 0, 0.7) 50%,
+      rgba(116, 149, 171, 0.1) 1%,
       rgba(255, 255, 255, 0.1)
     ),
-    url("./assets/mainBcg.jpeg") center/cover no-repeat;
+    url("./assets/black-feather.jpg") top/cover no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--primaryDarkColor);
+  color: var(--primaryColor);
+}
+.cursive {
+  font-family: var(--cursiveFont);
+  color: black;
 }
 .banner {
   width: var(--smallWidth);
@@ -211,12 +222,12 @@ Hero
   border-radius: 0;
   font-weight: bold;
   padding: 0.8rem 1.5rem;
-  background: var(--primaryDarkColor);
-  border-color: var(--primaryDarkColor);
+  background: var(--primaryColor);
+  border-color: var(--primaryColor);
   color: var(--mainBlack);
 }
 .btn-hero:hover {
-  color: var(--primaryDarkColor);
+  color: var(--primaryColor);
 }
 @media screen and (min-width: 768px) {
   .banner {
@@ -774,4 +785,28 @@ Filters Section
   margin-top: 8rem;
   font-size: 1.1rem;
   padding: 0 2rem;
+}
+
+
+/* 
+   loading gif icon 
+
+*/
+.loader{
+  margin: 0 0 2em;
+  height: 100px;
+  width: 20%;
+  text-align: center;
+  padding: 1em;
+  margin: 0 auto 1em;
+  display: inline-block;
+  vertical-align: top;
+}
+/*
+  Set the color of the loading gif icon
+
+*/
+svg path,
+svg rect{
+  fill: var(--primaryDarkColor);
 }
