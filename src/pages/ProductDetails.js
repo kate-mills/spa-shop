@@ -24,7 +24,7 @@ const ProductDetails = () =>{
   if(product){
     return (
     <section className="single-product">
-      <img src={product.image.url} alt={product.title} className="single-product-image"/>
+      <img src={product.image} alt={product.title} className="single-product-image"/>
       <article className="">
         <h1>{product.title}</h1>
         <h2>${product.price}</h2>
