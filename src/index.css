@@ -558,6 +558,12 @@ Login Button
 .login-btn:hover {
   color: var(--primaryColor);
 }
+.login-username{
+  color: var(--primaryDarkColor);
+  max-width: 50px;
+  overflow: none;
+
+}
 @media screen and (min-width: 768px) {
   .login-btn {
     font-size: 1.5rem;

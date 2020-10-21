@@ -39,7 +39,6 @@ const Login = ()=> {
     if(response){
       // navigate from page
       console.log('success');
-      console.log('response', response);
       const {jwt:token, user:{username}} = response.data; // json web token
       const authenticatedUser = {token, username}
       userLogin(authenticatedUser)

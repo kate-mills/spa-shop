@@ -4,6 +4,7 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
 import Header from './components/Header'
 import Alert from './components/Alert'
+import PrivateRoute from './components/PrivateRoute'
 
 import About from './pages/About'
 import Cart from './pages/Cart'
@@ -24,7 +25,7 @@ const App = () => {
         <Route path="/" exact><Home/></Route>
         <Route path="/about"><About/></Route>
         <Route path="/cart"><Cart/></Route>
-        <Route path="/checkout"><Checkout/></Route>
+        <PrivateRoute path="/checkout"><Checkout/></PrivateRoute>
         <Route path="/login"><Login/></Route>
         <Route path="/products" exact><Products/></Route>
         <Route path="/products/:id"><ProductDetails/></Route>

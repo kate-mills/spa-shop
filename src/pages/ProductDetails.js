@@ -19,8 +19,6 @@ const ProductDetails = () =>{
     return product.id === parseInt(params.id)
   });
 
-  console.log(product);
-
   if(product){
     return (
     <section className="single-product">
